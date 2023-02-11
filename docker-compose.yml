@@ -1,0 +1,25 @@
+version: '3.9'
+services:
+  master:
+    container_name: master
+    image: mysql:5.7
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+    ports:
+      - 33061:3306
+    volumes:
+      - master-db:/var/lib/mysql
+      - ./db-master/my.cnf:/etc/mysql/conf.d/my.cnf
+  slave:
+    container_name: slave
+    image: mysql:5.7
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+    ports:
+      - 33062:3306
+    volumes:
+      - slave-db:/var/lib/mysql
+      - ./db-slave/my.cnf:/etc/mysql/conf.d/my.cnf
+volumes:
+  master-db:
+  slave-db:
