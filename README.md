@@ -28,6 +28,9 @@
 今回は、slave の作成時に、`CHANGE MASTER`を利用して master の設定をしたので、そのタイミングでリレーログファイルが作成されたことになる。
 
 参考
+
 [MySQL 入門　レプリケーション編 \- Qiita](https://qiita.com/Tocyuki/items/c224cef57493f536a941)
+
 [MySQL :: MySQL 5\.6 リファレンスマニュアル :: 5\.2\.4 バイナリログ](https://dev.mysql.com/doc/refman/5.6/ja/binary-log.html)
+
 [第 53 回　リレーログファイルについて \| gihyo\.jp](https://gihyo.jp/dev/serial/01/mysql-road-construction-news/0053)
